@@ -1,9 +1,13 @@
 const express = require("express");
 const app = express();
+const cookieParser = require("cookie-parser");
 
 const ExpressError = require("./utils/ExpressError");
-const authRouter = require("./routes/auth.routes");
 
+const authRouter = require("./routes/auth.routes");
+const foodRouter = require("./routes/food.routes");
+
+app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -13,6 +17,8 @@ app.get("/", (req, res) => {
 
 // auth APIs
 app.use("/api/auth", authRouter);
+// food APIs
+app.use("/api/food", foodRouter);
 
 // Error Handling
 

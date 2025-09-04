@@ -7,7 +7,6 @@ const FoodPartnerModel = require("../models/foodPartner.model");
 async function registerUser(req, res) {
   const { fullName, email, password } = req.body;
   const isUserAlreadyExists = await UserModel.findOne({ email });
-  console.log(isUserAlreadyExists);
 
   if (isUserAlreadyExists) {
     return res.status(400).json({
