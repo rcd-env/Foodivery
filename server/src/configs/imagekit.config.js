@@ -10,6 +10,7 @@ async function uploadFile(file, fileName) {
   const result = await imagekit.upload({
     file,
     fileName,
+    folder: "/Foodivery",
   });
   return result;
 }
