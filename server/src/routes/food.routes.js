@@ -9,6 +9,8 @@ const foodController = require("../controllers/food.controller");
 const authMiddleware = require("../middlewares/auth.middleware");
 const validateFoodItem = require("../middlewares/foodValidation.middleware");
 
+router.get("/", authMiddleware.isUser, foodController.getFoods);
+
 router.post(
   "/",
   authMiddleware.isFoodPartner,
