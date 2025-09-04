@@ -4,7 +4,10 @@ const { v4: uuid } = require("uuid");
 
 async function getFoods(req, res) {
   const foodItems = await FoodModel.find({});
-  res.status(200).json(foodItems);
+  res.status(200).json({
+    message: "Food items fetched successfully.",
+    foodItems,
+  });
 }
 
 async function createFood(req, res) {
