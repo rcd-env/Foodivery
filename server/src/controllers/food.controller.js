@@ -10,10 +10,10 @@ async function createFood(req, res) {
     name,
     description,
     video: uploadResult.url,
-    foodPartner: req.foodPartner,
+    foodPartner: req.foodPartner._id,
   });
   res.status(201).json({
-    message: "New food item created",
+    message: "New food item added.",
     foodItem: {
       name: newFood.name,
       description: newFood.description,
