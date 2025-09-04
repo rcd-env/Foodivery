@@ -13,7 +13,7 @@ async function createFood(req, res) {
     foodPartner: req.foodPartner._id,
   });
   res.status(201).json({
-    message: "New food item added.",
+    message: "New food item added successfuly.",
     foodItem: {
       name: newFood.name,
       description: newFood.description,

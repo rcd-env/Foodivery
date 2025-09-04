@@ -7,11 +7,13 @@ const upload = multer({
 
 const foodController = require("../controllers/food.controller");
 const authMiddleware = require("../middlewares/auth.middleware");
+const validateFoodItem = require("../middlewares/foodValidation.middleware");
 
 router.post(
   "/",
   authMiddleware.isFoodPartner,
   upload.single("video"),
+  validateFoodItem,
   foodController.createFood
 );
 
