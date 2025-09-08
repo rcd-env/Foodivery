@@ -5,21 +5,18 @@ import "./index.css";
 import HomePage from "./pages/home/HomePage";
 import UserRegister from "./pages/register/UserRegister";
 import NotFoundPage from "./pages/NotFoundPage";
+import PartnerRegister from "./pages/register/PartnerRegister";
+import PartnerLogin from "./pages/login/PartnerLogin";
+import UserLogin from "./pages/login/UserLogin";
 
 createRoot(document.getElementById("root")).render(
   <Router>
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/user/register" element={<UserRegister />} />
-      <Route path="/user/login" element={<div>User Login</div>} />
-      <Route
-        path="/food-partner/register"
-        element={<div>Food Partner Register</div>}
-      />
-      <Route
-        path="/food-partner/login"
-        element={<div>Food Partner Login</div>}
-      />
+      <Route path="/user/login" element={<UserLogin />} />
+      <Route path="/food-partner/register" element={<PartnerRegister />} />
+      <Route path="/food-partner/login" element={<PartnerLogin />} />
       <Route
         path="/food-partner/dashboard"
         element={<div>Food Partner Dashboard</div>}
