@@ -1,7 +1,12 @@
 import React from "react";
+import Navbar from "../Navbar";
 
 function HomePage() {
-  return <div>HomePage</div>;
+  return (
+    <div className="w-full h-screen">
+      <Navbar />
+    </div>
+  );
 }
 
 export default HomePage;
