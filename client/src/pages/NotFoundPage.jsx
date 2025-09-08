@@ -6,7 +6,7 @@ function NotFoundPage() {
   }, []);
   return (
     <div className="flex items-center justify-center h-screen">
-      <h1 className="text-xl font-extralight opacity-60 flex items-center">
+      <h1 className="text-xl text-orange-300 font-extralight opacity-60 flex items-center">
         <span>404</span>
         <span className="border-l-2 ml-4 pl-4">NOT FOUND</span>
       </h1>
