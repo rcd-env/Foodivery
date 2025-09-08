@@ -2,6 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Link } from "react-router";
+import axios from "axios";
 
 function UserRegister() {
   const formik = useFormik({
@@ -20,12 +21,29 @@ function UserRegister() {
         .required("Required"),
     }),
     onSubmit: (values) => {
-      console.log("Form values:", values.firstName);
+      axios
+        .post(
+          "http://localhost:8080/api/auth/user/register",
+          {
+            fullName: values.firstName + " " + values.lastName,
+            email: values.email,
+            password: values.password,
+          },
+          {
+            withCredentials: true,
+          }
+        )
+        .then((response) => {
+          console.log("Server response:", response.data);
+        })
+        .catch((error) => {
+          console.error("There was an error registering the user!", error);
+        });
     },
   });
   return (
     <div className="w-full h-screen flex justify-center items-center ">
-      <div className="w-[85%] sm:w-auto sm:border sm:border-orange-500 sm:rounded-lg sm:px-10 sm:py-8 sm:bg-gray-800 sm:shadow-lg">
+      <div className="w-[85%] lg:w-[33%] sm:w-[60%]  sm:rounded-lg sm:px-10 sm:py-8 sm:bg-gray-800 sm:shadow-lg">
         <h1 className="text-2xl font-semibold text-center text-amber-500">
           Create User Account
         </h1>
