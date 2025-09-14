@@ -9,11 +9,10 @@ const authRouter = require("./routes/auth.routes");
 const foodRouter = require("./routes/food.routes");
 
 app.use(
-  // cors({
-  //   origin: "https://foodivery-nu.vercel.app",
-  //   credentials: true,
-  // })
-  cors()
+  cors({
+    origin: ["https://foodivery-nu.vercel.app", "http://localhost:5173"],
+    credentials: true,
+  })
 );
 app.use(cookieParser());
 app.use(express.json());
