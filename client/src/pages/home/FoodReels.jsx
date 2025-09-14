@@ -94,11 +94,11 @@ function FoodReels() {
     >
       {loading ? (
         <div className="flex items-center justify-center h-full">
-          <div className="text-white text-lg">Loading reels...</div>
+          <div className="text-white text-lg">Loading foods...</div>
         </div>
       ) : reels.length === 0 ? (
         <div className="flex items-center justify-center h-full">
-          <div className="text-white text-lg">No reels available</div>
+          <div className="text-white text-lg">No food available</div>
         </div>
       ) : (
         reels.map((reel, index) => (
@@ -110,6 +110,7 @@ function FoodReels() {
               ref={(el) => (videoRefs.current[index] = el)}
               className="reel-video w-full h-full"
               src={reel.video}
+              autoplay
               muted
               loop
               playsInline
