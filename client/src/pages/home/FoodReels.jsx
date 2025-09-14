@@ -14,7 +14,9 @@ function FoodReels() {
     const fetchReels = async () => {
       try {
         setLoading(true);
-        const response = await axios.get("http://localhost:8080/api/food"); // Adjust the endpoint as needed
+        const response = await axios.get(
+          "https://foodivery.onrender.com/api/food"
+        ); // Adjust the endpoint as needed
         const data = response.data;
         console.log(data);
         if (Array.isArray(data.foodItems) && data.foodItems.length > 0) {

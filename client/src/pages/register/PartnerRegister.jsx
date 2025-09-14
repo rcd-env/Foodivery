@@ -29,9 +29,13 @@ function PartnerRegister() {
     }),
     onSubmit: (values) => {
       axios
-        .post("http://localhost:8080/api/auth/food-partner/register", values, {
-          withCredentials: true,
-        })
+        .post(
+          "https://foodivery.onrender.com/api/auth/food-partner/register",
+          values,
+          {
+            withCredentials: true,
+          }
+        )
         .then((response) => {
           console.log("Server response:", response.data);
         })

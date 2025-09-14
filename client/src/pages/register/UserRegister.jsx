@@ -23,7 +23,7 @@ function UserRegister() {
     onSubmit: (values) => {
       axios
         .post(
-          "http://localhost:8080/api/auth/user/register",
+          "https://foodivery.onrender.com/api/auth/user/register",
           {
             fullName: values.firstName + " " + values.lastName,
             email: values.email,

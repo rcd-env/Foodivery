@@ -18,9 +18,13 @@ function PartnerLogin() {
     }),
     onSubmit: (values) => {
       axios
-        .post("http://localhost:8080/api/auth/food-partner/login", values, {
-          withCredentials: true,
-        })
+        .post(
+          "https://foodivery.onrender.com/api/auth/food-partner/login",
+          values,
+          {
+            withCredentials: true,
+          }
+        )
         .then((response) => {
           console.log("Server response:", response.data);
         })
