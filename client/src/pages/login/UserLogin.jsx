@@ -1,10 +1,12 @@
 import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import axios from "axios";
 
 function UserLogin() {
+  const navigate = useNavigate();
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -23,9 +25,11 @@ function UserLogin() {
         })
         .then((response) => {
           console.log("Server response:", response.data);
+          navigate("/");
         })
         .catch((error) => {
-          console.error("There was an error logging in the user!", error);
+          confirm("Login failed. Please check your credentials and try again.");
+          console.error("There was an error!", error);
         });
     },
   });
