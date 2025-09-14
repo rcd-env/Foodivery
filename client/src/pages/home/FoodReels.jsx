@@ -18,11 +18,9 @@ function FoodReels() {
           "https://foodivery.onrender.com/api/food"
         ); // Adjust the endpoint as needed
         const data = response.data;
-        console.log(data);
         if (Array.isArray(data.foodItems) && data.foodItems.length > 0) {
           setReels(data.foodItems);
         }
-        console.log("Reels loaded:", data.foodItems);
       } catch (error) {
         console.log("Error fetching reels:", error);
       } finally {

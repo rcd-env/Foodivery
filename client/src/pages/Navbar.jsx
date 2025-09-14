@@ -13,7 +13,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="h-16 w-full px-8 sm:px-36 text-[14.4px] flex justify-between items-center shadow-md fixed z-50 top-0">
+    <nav className="h-16 w-full px-8 sm:px-36 text-[14.4px] bg-[#1A202C] flex justify-between items-center shadow-md fixed z-50 top-0">
       <div>
         <Link to="/" onClick={closeMenu}>
           <h1 className="text-xl font-semibold tracking-widest text-orange-500">
@@ -22,7 +22,7 @@ function Navbar() {
         </Link>
       </div>
 
-      <div className="hidden sm:flex gap-12 font-light">
+      <div className="hidden bg-[#1A202C] sm:flex gap-12 font-light">
         <Link
           to="/user/register"
           className="text-green-500 hover:text-green-600"
@@ -34,7 +34,10 @@ function Navbar() {
         </Link>
       </div>
 
-      <button className="block sm:hidden cursor-pointer" onClick={toggleMenu}>
+      <button
+        className="block bg-[#1A202C] sm:hidden cursor-pointer"
+        onClick={toggleMenu}
+      >
         <div className="w-6 h-6 flex flex-col justify-center items-center relative">
           <span
             className={`w-full h-0.5 bg-white absolute transition-all duration-300 ${
