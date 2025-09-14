@@ -110,7 +110,7 @@ function FoodReels() {
               ref={(el) => (videoRefs.current[index] = el)}
               className="reel-video w-full h-full"
               src={reel.video}
-              autoplay
+              autoPlay
               muted
               loop
               playsInline
