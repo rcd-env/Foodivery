@@ -1,11 +1,14 @@
 import React from "react";
 import Navbar from "../Navbar";
+import Footer from "../Footer";
+import ReelContainer from "./reelContainer";
 
 function HomePage() {
   return (
-    <div className="w-full h-screen">
-      <Navbar />
-    </div>
+    <>
+      <ReelContainer />
+      <Footer />
+    </>
   );
 }
 
