@@ -10,7 +10,7 @@ const foodRouter = require("./routes/food.routes");
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://foodivery-nu.vercel.app"],
+    origin: "https://foodivery-nu.vercel.app",
     credentials: true,
   })
 );
