@@ -1,12 +1,14 @@
 import React from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import ReelContainer from "./ReelContainer";
+import FoodReels from "./FoodReels";
 
 function HomePage() {
   return (
     <>
-      <ReelContainer />
+      <Navbar />
+      <FoodReels />
+      <Footer />
     </>
   );
 }

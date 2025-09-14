@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router";
 import axios from "axios";
 
-function ReelContainer() {
+function FoodReels() {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [reels, setReels] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -155,4 +155,4 @@ function ReelContainer() {
   );
 }
 
-export default ReelContainer;
+export default FoodReels;
