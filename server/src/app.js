@@ -13,9 +13,7 @@ app.use(
   //   origin: "https://foodivery-nu.vercel.app",
   //   credentials: true,
   // })
-  cors({
-    credentials: true,
-  })
+  cors()
 );
 app.use(cookieParser());
 app.use(express.json());
