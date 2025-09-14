@@ -9,3 +9,23 @@ body {
   font-family: "Inter", sans-serif;
   letter-spacing: 1.5px;
 }
+
+/* Hide scrollbar for reel container */
+.reel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.reel-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Smooth scroll behavior */
+.reel-container {
+  scroll-behavior: smooth;
+}
+
+/* Ensure video covers full container */
+.reel-video {
+  object-fit: cover;
+}
