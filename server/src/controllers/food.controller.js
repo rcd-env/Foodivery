@@ -3,7 +3,8 @@ const FoodModel = require("../models/food.model");
 const { v4: uuid } = require("uuid");
 
 async function getFoods(req, res) {
-  const foodItems = await FoodModel.find({});
+  let foodItems = await FoodModel.find({});
+  foodItems = foodItems.sort(() => Math.random() - 0.5);
   res.status(200).json({
     message: "Food items fetched successfully.",
     foodItems,
