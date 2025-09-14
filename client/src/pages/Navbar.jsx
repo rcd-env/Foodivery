@@ -56,7 +56,7 @@ function Navbar() {
 
       {isMenuOpen && (
         <div className="absolute top-16 left-0 w-full bg-[#1A202C] shadow-md block sm:hidden">
-          <div className="flex flex-col gap-4 font-light p-4">
+          <div className="flex flex-col gap-4 font-light px-8 pt-2 pb-4">
             <Link
               to="/user/register"
               className="text-green-500 hover:text-blue-400"
